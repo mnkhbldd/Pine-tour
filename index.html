@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+    }
+    .background {
+      background-image: url(img/Image.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100vw;
+      margin: 0px;
+    }
+    .logo img {
+      width: 101px;
+      height: 35px;
+    }
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 90.5px;
+      position: fixed;
+      width: 1204px;
+    }
+    .actioncontainer {
+      display: flex;
+      gap: 30px;
+    }
+    .actioncontainer a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-style: normal;
+      line-height: normal;
+    }
+
+    .language {
+      color: black;
+      background-color: white;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px;
+      border-radius: 24px;
+    }
+
+    .textcontainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80%;
+    }
+
+    .pure {
+      color: rgba(232, 237, 242, 0.72);
+      font-size: 80px;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+
+    .awaits {
+      color: white;
+      font-size: 250px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+    }
+    .year {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 64px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 100%;
+    }
+
+    .card1 {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 275px;
+      height: 370px;
+    }
+    .card1 img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 40px;
+      box-shadow: -8px -8px 0px 0px rgba(31, 114, 170, 0.46),
+        8px 8px 0px 0px rgba(41, 114, 139, 0.25);
+    }
+    .card1 span {
+      position: relative;
+      color: white;
+      text-shadow: 0px 4px 4.9px rgba(0, 0, 0, 0.65);
+      font-size: 25px;
+      font-weight: 400;
+      text-transform: uppercase;
+      width: 275px;
+      text-align: center;
+    }
+
+    .background2 {
+      background-image: url(img/Map\ Image.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .titlecontainer3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .priceofouragency {
+      color: black;
+      font-size: 42px;
+      font-weight: 600;
+    }
+
+    .foryou {
+      color: rgba(24, 24, 27, 0.7);
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .icontext img {
+      width: 14px;
+      height: 14px;
+    }
+
+    .icontext {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .sukhiulan {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .day {
+      background-color: white;
+      padding: 21px 9px 21px 9px;
+      border-radius: 50px;
+    }
+    .locationinfo {
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      justify-content: space-between;
+    }
+
+    .locationinfomain {
+      background-color: #eee9d9;
+      width: 450px;
+      padding: 20px 20px 20px 0px;
+      border-radius: 120px;
+    }
+
+    .locationinfomain1 {
+      background-color: #8bb8c1cc;
+      width: 450px;
+      padding: 20px 20px 20px 0px;
+      border-radius: 120px;
+    }
+
+    .locationinfomain2 {
+      background-color: #aad8d7cc;
+      width: 450px;
+      padding: 20px 20px 20px 0px;
+      border-radius: 120px;
+    }
+
+    .locationinfomain3 {
+      background-color: #8bc0bdcc;
+      width: 450px;
+      padding: 20px 20px 20px 0px;
+      border-radius: 120px;
+    }
+
+    .locationinfomain4 {
+      background-color: #97cce0cc;
+      width: 450px;
+      padding: 20px 20px 20px 0px;
+      border-radius: 120px;
+    }
+
+    .locationcontainer {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 513px;
+    }
+
+    .location {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .backgroundbox {
+      height: 527px;
+      width: 385px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 40px;
+    }
+
+    .logowithtext {
+      display: flex;
+      gap: 16px;
+      flex-direction: row;
+      align-items: center;
+      padding: 32px 24px 24px 24px;
+    }
+
+    .logowithtext img {
+      border: 1px solid #d6d8db;
+      border-radius: 50%;
+      background-color: white;
+      padding: 8px;
+    }
+
+    .logowithtext span {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .textgap {
+      gap: 32px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .toptextgap {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 0px 0px 24px;
+      gap: 10px;
+    }
+
+    .pricetext {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    .pricedesk {
+      display: block;
+      color: #919191;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .detailgap {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .detailtextgap {
+      gap: 16px;
+      display: flex;
+      flex-direction: column;
+      padding: 0px 0px 0px 24px;
+      width: 300px;
+      align-self: stretch;
+    }
+
+    .includes span {
+      font-size: 18px;
+      font-weight: 500;
+      padding-left: 40px;
+    }
+
+    .checkimg {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .checkimg img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .checkimg span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+      font-style: normal;
+    }
+
+    .selectpackagepos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .selectpackagepos button {
+      color: black;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.16px;
+      width: 336px;
+      height: 48px;
+      border: none;
+      border-radius: 9999px;
+      background-color: #a4d1e2;
+    }
+    .background3 {
+      background-image: url(img/Price&Footer\ Section.png);
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .priceofouragency {
+      color: black;
+      font-size: 42px;
+      font-weight: 600;
+      margin-top: 50px;
+    }
+
+    .foryou {
+      color: rgba(24, 24, 27, 0.7);
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .cardpackage {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .fbig {
+      display: flex;
+      gap: 20px;
+    }
+
+    .fb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: white;
+      border-radius: 9999px;
+      padding: 1px 20px;
+    }
+
+    .ig {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      gap: 10px;
+      border-radius: 9999px;
+      padding: 10px 20px;
+    }
+
+    .fbigicon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .fbig span {
+      font-size: 18px;
+      font-weight: 700px;
+      color: #6972b5;
+    }
+
+    .logo2 {
+      width: 101px;
+      height: 35px;
+    }
+
+    .bottom {
+      width: 1200px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 80px 120px;
+    }
+
+    .rightsection {
+      width: 647px;
+      height: 590px;
+      position: relative;
+    }
+
+    .mapping1 {
+      top: 142px;
+      left: 295px;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+    }
+
+    .mapping2 {
+      top: 224px;
+      left: 87px;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+    }
+
+    .mapping3 {
+      top: 281px;
+      left: 492px;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+    }
+
+    .mapping4 {
+      top: 490px;
+      left: 339px;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+    }
+
+    .mapping5 {
+      left: 82px;
+      top: 40px;
+      width: 34px;
+      height: 34px;
+      position: absolute;
+    }
+
+    .rightleft {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 1200px;
+      position:relative
+    }
+
+    .last {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 200px;
+    }
+
+    .last2 {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .background1 {
+      display: flex;
+      padding: 65px 100px;
+      justify-content: center;
+      align-items: center;
+      background-color: #9db8da33;
+    }
+
+    .cards {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .hero {
+      width: 1200px;
+      height: 100%;
+    }
+
+    .locationinfomain:hover {
+      border: 4px solid white;
+    }
+
+    .locationinfomain1:hover {
+      border: 4px solid white;
+    }
+
+    .locationinfomain2:hover {
+      border: 4px solid white;
+    }
+
+    .locationinfomain3:hover {
+      border: 4px solid white;
+    }
+
+    .locationinfomain4:hover {
+      border: 4px solid white;
+    }
+
+    .locationinfomain:hover .sukhbaatar {
+      display: flex;
+    }
+
+    .locationinfomain1:hover .amarbaysgalant {
+      display: flex;
+    }
+
+    .locationinfomain2:hover .horgiintogoo {
+      display: flex;
+    }
+
+    .locationinfomain3:hover .terkh {
+      display: flex;
+    }
+
+    .locationinfomain4:hover .khuvsgul {
+      display: flex;
+    }
+
+    .card1:hover img {
+      filter: brightness(50%);
+    }
+
+    .sukhbaatar {
+      position: absolute; 
+      left: 100%; 
+      top: 50%;
+      width: 250px;
+      height: 250px;
+      display: none;
+    }
+
+    .horgiintogoo {
+      position: absolute; 
+      left: 60%; 
+      top: 60%;
+      width: 250px;
+      height: 250px;
+      display: none;
+    }
+
+    .amarbaysgalant{
+      position: absolute; 
+      left: 80%; 
+      top: 30%;
+      width: 250px;
+      height: 250px;
+      display: none;
+    }
+
+    .terkh{
+      position: absolute; 
+      left: 50%; 
+      top: 60%;
+      width: 250px;
+      height: 250px;
+      display: none;
+    }
+
+    .khuvsgul{
+      position: absolute; 
+      left: 50%; 
+      top: 10%;
+      width: 250px;
+      height: 250px;
+      display: none;
+    }
+
+  </style>
+  <body>
+    <div class="background">
+      <div class="hero">
+        <div class="navigation">
+          <div class="logo">
+            <img src="img/logo 1.png" alt="" />
+          </div>
+          <div class="actioncontainer">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <img src="img/user.png" alt="" />
+          </div>
+          <div class="language">EN</div>
+        </div>
+        <div class="textcontainer">
+          <span class="pure">PURE MAGIC</span>
+          <span class="awaits">AWAITS!</span>
+          <span class="year">2024</span>
+        </div>
+      </div>
+    </div>
+    <div class="background1">
+      <div class="cards">
+        <div class="card1">
+          <img src="img/image31.png" alt="" />
+          <span>TERKHIIN TSAGAAN LAKE</span>
+        </div>
+        <div class="card1">
+          <img src="img/image33.png" alt="" />
+          <span>AMARBAYASGALANT MONASTERY</span>
+        </div>
+        <div class="card1">
+          <img src="img/image34.png" alt="" />
+          <span>KHUVSGUL LAKE</span>
+        </div>
+        <div class="card1">
+          <img src="img/image32.png" alt="" />
+          <span>KHORGIIN TOGOO</span>
+        </div>
+      </div>
+    </div>
+    <div class="background2">
+      <div class="last">
+        <div class="titlecontainer3">
+          <span class="priceofouragency">Destination of Our Agency</span>
+          <span class="foryou">Pack Your Bags And Get Ready</span>
+        </div>
+        <div class="rightleft">
+          <div class="locationcontainer">
+            <div class="locationinfomain">
+              <div class="locationinfo">
+                <div class="sukhiulan">
+                  <span class="location">Sukhbaatar square</span>
+                  <div class="icontext">
+                    <img src="img/Icon Container 2.png" alt="" />
+                    <span>Ulaanbaatar</span>
+                  </div>
+                </div>
+                <span class="day">DAY 1</span>
+              </div>
+              <img class="sukhbaatar" src="img/16010885e9b9cf404e7b21d9eda6fd49.png" alt="">
+            </div>
+            <div class="locationinfomain1">
+              <div class="locationinfo">
+                <div class="sukhiulan">
+                  <span class="location">Amarbaysgalant monastery</span>
+                  <div class="icontext">
+                    <img src="img/Icon Container 2.png" alt="" />
+                    <span>Bulgan</span>
+                  </div>
+                </div>
+                <span class="day">DAY 2</span>
+              </div>
+              <img class="amarbaysgalant" src="img/Frame 177.png" alt="">
+            </div>
+            <div class="locationinfomain2">
+              <div class="locationinfo">
+                <div class="sukhiulan">
+                  <span class="location">Khorgiin togoo</span>
+                  <div class="icontext">
+                    <img src="img/Icon Container 2.png" alt="" />
+                    <span>Arkhangai</span>
+                  </div>
+                </div>
+                <span class="day">DAY 3</span>
+              </div>
+              <img class="horgiintogoo" src="img/11111.png" alt="">
+            </div>
+            <div class="locationinfomain3">
+              <div class="locationinfo">
+                <div class="sukhiulan">
+                  <span class="location">Terkhiin tsagaan lake</span>
+                  <div class="icontext">
+                    <img src="img/Icon Container 2.png" alt="" />
+                    <span>Arkhangai</span>
+                  </div>
+                </div>
+                <span class="day">DAY 4</span>
+              </div>
+              <img class="terkh" src="img/Frame 178.png" alt="">
+            </div>
+            <div class="locationinfomain4">
+              <div class="locationinfo">
+                <div class="sukhiulan">
+                  <span class="location">Khuvsgul lake</span>
+                  <div class="icontext">
+                    <img src="img/Icon Container 2.png" alt="" />
+                    <span>Khuvsgul</span>
+                  </div>
+                </div>
+                <span class="day">DAY 5</span>
+              </div>
+              <img class="khuvsgul" src="img/Frame 179.png" alt="">
+            </div>
+          </div>
+          <div class="rightsection">
+            <div class="mappingmain">
+              <img class="mapping1" src="img/MapPin 1.png" alt="" />
+              <img class="mapping2" src="img/MapPin 1.png" alt="" />
+              <img class="mapping3" src="img/MapPin 1.png" alt="" />
+              <img class="mapping4" src="img/MapPin 1.png" alt="" />
+              <img class="mapping5" src="img/MapPin 1.png" alt="" />
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background3">
+      <div class="last2">
+        <div class="titlecontainer3">
+          <span class="priceofouragency">Price of Our Agency</span>
+          <span class="foryou">Choose A Package That's Right For You</span>
+        </div>
+        <div class="cardpackage">
+          <div class="backgroundbox">
+            <div class="logowithtext">
+              <img src="img/Icon.png" alt="loveicon" />
+              <span>Budget Package</span>
+            </div>
+            <div class="textgap">
+              <div class="toptextgap">
+                <span class="pricetext">500$</span>
+                <span class="pricedesk">Essentials Covered</span>
+              </div>
+              <div class="detailgap">
+                <div class="detailtextgap">
+                  <div class="includes">
+                    <span>Includes:</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>Group transportation (shared van/bus)</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>Standard accomodation (yurt or guesthouse)</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>Guided lake tour</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>1 meal per day (breakfast)</span>
+                  </div>
+                </div>
+                <div class="selectpackagepos">
+                  <button>Select package</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="backgroundbox">
+            <div class="logowithtext">
+              <img src="img/Icon.png" alt="loveicon" />
+              <span>Standard Package</span>
+            </div>
+            <div class="textgap">
+              <div class="toptextgap">
+                <span class="pricetext">800$</span>
+                <span class="pricedesk">Balanced Adventure</span>
+              </div>
+              <div class="detailgap">
+                <div class="detailtextgap">
+                  <div class="includes">
+                    <span>Includes:</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>Comfortable transportation (mini-bus)</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>Mid-range accomodation (private yurt or lodge)</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>Guided lake tour + nearby hiking</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>2 meals per day (breakfast and dinner)</span>
+                  </div>
+                </div>
+                <div class="selectpackagepos">
+                  <button>Select package</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="backgroundbox">
+            <div class="logowithtext">
+              <img src="img/Icon.png" alt="loveicon" />
+              <span>Luxury Package</span>
+            </div>
+            <div class="textgap">
+              <div class="toptextgap">
+                <span class="pricetext">1200$</span>
+                <span class="pricedesk">Ultimate Comfort</span>
+              </div>
+              <div class="detailgap">
+                <div class="detailtextgap">
+                  <div class="includes">
+                    <span>Includes:</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>Private transportation (SUV)</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>Luxury accomodation (lakefront lodge)</span>
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span
+                      >Guided tours (lake + reindeer herder experience)</span
+                    >
+                  </div>
+                  <div class="checkimg">
+                    <img src="img/check.png" alt="" />
+                    <span>All meals included (local cuisine)</span>
+                  </div>
+                </div>
+                <div class="selectpackagepos">
+                  <button>Select package</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="fbig">
+            <div class="fb">
+              <img class="fbigicon" src="img/Facebook Icon.png" alt="" />
+              <span>Facebook</span>
+            </div>
+            <div class="ig">
+              <img class="fbigicon" src="img/Instagram Icon.png" alt="" />
+              <span>Instagram</span>
+            </div>
+          </div>
+          <img class="logo2" src="img/logo 1.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
